@@ -1,0 +1,42 @@
+{
+    "manifest_version": 2,
+    "name": "Hakka",
+    "version": "0.1alpha13",
+
+    "description": "RSS Reader.",
+      
+    "permissions": [
+        "activeTab",
+        "tabs",
+        "storage",
+        "<all_urls>"
+    ],
+
+    "browser_action": {
+        "browser_style": true,
+        "default_title": "Hakka"
+    },
+
+    "options_ui": {
+        "browser_style": true,
+        "page": "options.html"
+    },
+
+    "background": {
+        "scripts": ["background.js"]
+    },
+
+    "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self';",
+
+    "web_accessible_resources": [
+        "reader.html",
+        "dist/build.js"
+    ],
+
+    "applications": {
+        "gecko": {
+            "id": "hakka@progress-ng.com",
+            "update_url": "https://webext.progress-ng.com/hakka/update.json"
+        }
+    }
+}
