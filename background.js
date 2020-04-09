@@ -1,7 +1,7 @@
 var tabId = null;
 
 function createTab() {
-    var res = browser.tabs.create(
+    browser.tabs.create(
         {
             active: true,
             url: browser.extension.getURL("reader.html")
